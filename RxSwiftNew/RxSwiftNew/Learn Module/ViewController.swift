@@ -41,6 +41,7 @@ class ViewController: UIViewController {
         observer.onCompleted()
         return Disposables.create()
     }
+    
 }
 
 

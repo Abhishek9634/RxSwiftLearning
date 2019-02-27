@@ -19,26 +19,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fc-QD-E6s">
-                                <rect key="frame" x="164.5" y="318.5" width="46" height="30"/>
+                                <rect key="frame" x="165" y="319" width="45" height="29"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="v2J-xQ-gaD" kind="show" id="1rm-bP-hfi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Njd-NU-7uG">
-                                <rect key="frame" x="165" y="411.5" width="45" height="30"/>
+                                <rect key="frame" x="165" y="411" width="45" height="31"/>
                                 <state key="normal" title="LOGIN"/>
                                 <connections>
                                     <segue destination="7mQ-lh-7R1" kind="show" id="co8-JA-Pg2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c97-MC-lS7">
+                                <rect key="frame" x="143" y="486" width="89" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="xjB-vX-c3k"/>
+                                </constraints>
+                                <state key="normal" title="Image Picker"/>
+                                <connections>
+                                    <segue destination="a9M-9K-j0W" kind="show" id="g5O-Jv-8J2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Njd-NU-7uG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Adq-fu-Xs0"/>
-                            <constraint firstItem="2fc-QD-E6s" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GYf-6o-qTg"/>
-                            <constraint firstItem="Njd-NU-7uG" firstAttribute="top" secondItem="2fc-QD-E6s" secondAttribute="bottom" constant="63" id="aNR-rk-OQq"/>
-                            <constraint firstItem="2fc-QD-E6s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ww4-xJ-uTa"/>
+                            <constraint firstItem="Njd-NU-7uG" firstAttribute="top" secondItem="2fc-QD-E6s" secondAttribute="bottom" constant="63" id="71K-dT-fFf"/>
+                            <constraint firstItem="2fc-QD-E6s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FNq-gk-2Bp"/>
+                            <constraint firstItem="c97-MC-lS7" firstAttribute="top" secondItem="Njd-NU-7uG" secondAttribute="bottom" constant="44" id="HX0-Jl-DTN"/>
+                            <constraint firstItem="Njd-NU-7uG" firstAttribute="centerX" secondItem="c97-MC-lS7" secondAttribute="centerX" id="JY8-xr-foz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="c97-MC-lS7" secondAttribute="bottom" constant="151" id="JiL-x1-bHi"/>
+                            <constraint firstItem="2fc-QD-E6s" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LQB-Zv-Sfn"/>
+                            <constraint firstItem="2fc-QD-E6s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="165" id="RTW-J5-juV"/>
+                            <constraint firstItem="2fc-QD-E6s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="255" id="UnU-ay-EmV"/>
+                            <constraint firstItem="2fc-QD-E6s" firstAttribute="leading" secondItem="Njd-NU-7uG" secondAttribute="leading" id="bwl-AR-PDK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -47,6 +62,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="107.49625187406298"/>
+        </scene>
+        <!--ImageCollage-->
+        <scene sceneID="snn-ux-4d2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ImageCollage" id="a9M-9K-j0W" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pTS-2g-RzR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1586" y="571"/>
         </scene>
         <!--My View Controller-->
         <scene sceneID="Whe-mn-jLa">

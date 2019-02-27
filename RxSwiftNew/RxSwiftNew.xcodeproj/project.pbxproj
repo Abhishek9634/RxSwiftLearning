@@ -16,6 +16,8 @@
 		9F643A1F2185D5E600A7EFAF /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F643A1E2185D5E600A7EFAF /* MyTableViewCell.swift */; };
 		9F643A212185D66300A7EFAF /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F643A202185D66300A7EFAF /* MyViewController.swift */; };
 		9F7889BF21733F18003C56D9 /* FilteringOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7889BE21733F18003C56D9 /* FilteringOperators.swift */; };
+		9F8A4A802226776400FC30C4 /* ImageCollage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F8A4A7F2226776400FC30C4 /* ImageCollage.storyboard */; };
+		9F8A4A822226791300FC30C4 /* ImageCollageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8A4A812226791300FC30C4 /* ImageCollageViewController.swift */; };
 		9FA4BB412162BA9D009A2A41 /* ObservableDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA4BB402162BA9D009A2A41 /* ObservableDemo.swift */; };
 		9FA57DC5221F05B100326B17 /* SubjectsDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA57DC4221F05B100326B17 /* SubjectsDemo.swift */; };
 		9FD495892184AA7500B7E56E /* TransformingOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD495882184AA7500B7E56E /* TransformingOperators.swift */; };
@@ -37,6 +39,8 @@
 		9F643A1E2185D5E600A7EFAF /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		9F643A202185D66300A7EFAF /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		9F7889BE21733F18003C56D9 /* FilteringOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringOperators.swift; sourceTree = "<group>"; };
+		9F8A4A7F2226776400FC30C4 /* ImageCollage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageCollage.storyboard; sourceTree = "<group>"; };
+		9F8A4A812226791300FC30C4 /* ImageCollageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollageViewController.swift; sourceTree = "<group>"; };
 		9FA4BB402162BA9D009A2A41 /* ObservableDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableDemo.swift; sourceTree = "<group>"; };
 		9FA57DC4221F05B100326B17 /* SubjectsDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectsDemo.swift; sourceTree = "<group>"; };
 		9FD495882184AA7500B7E56E /* TransformingOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformingOperators.swift; sourceTree = "<group>"; };
@@ -92,9 +96,9 @@
 		9F36C6A821426EBB006DEDCB /* RxSwiftNew */ = {
 			isa = PBXGroup;
 			children = (
+				9F8A4A7C222673D100FC30C4 /* Learn Module */,
 				9F8A4A7E2226747700FC30C4 /* ImageCollage */,
 				9F8A4A7D222673EE00FC30C4 /* Resources */,
-				9F8A4A7C222673D100FC30C4 /* Learn Module */,
 			);
 			path = RxSwiftNew;
 			sourceTree = "<group>";
@@ -129,6 +133,8 @@
 		9F8A4A7E2226747700FC30C4 /* ImageCollage */ = {
 			isa = PBXGroup;
 			children = (
+				9F8A4A7F2226776400FC30C4 /* ImageCollage.storyboard */,
+				9F8A4A812226791300FC30C4 /* ImageCollageViewController.swift */,
 			);
 			path = ImageCollage;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F8A4A802226776400FC30C4 /* ImageCollage.storyboard in Resources */,
 				9F36C6B421426EBD006DEDCB /* LaunchScreen.storyboard in Resources */,
 				9F36C6B121426EBD006DEDCB /* Assets.xcassets in Resources */,
 				9F36C6AF21426EBC006DEDCB /* Main.storyboard in Resources */,
@@ -247,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F8A4A822226791300FC30C4 /* ImageCollageViewController.swift in Sources */,
 				9F36C6AC21426EBC006DEDCB /* ViewController.swift in Sources */,
 				9FA57DC5221F05B100326B17 /* SubjectsDemo.swift in Sources */,
 				9FD495892184AA7500B7E56E /* TransformingOperators.swift in Sources */,
