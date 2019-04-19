@@ -11,13 +11,13 @@ import JSONParsing
 
 public struct Source: JSONParseable {
     
-    var id: String
-    var name: String
-    var desc: String
-    var url: String
-    var category: String
-    var language: String
-    var country: String
+    public var id: String
+    public var name: String
+    public var desc: String
+    public var url: String
+    public var category: String
+    public var language: String
+    public var country: String
     
     public static func parse(_ json: JSON) throws -> Source {
         return try Source(id: json["id"]^,
