@@ -16,8 +16,8 @@ public struct APIConfig {
     
     struct APIUrl {
         static let Base = APIUrl.Development
-        private static let Production = ""
-        private static let Development = ""
+        private static let Production = "https://newsapi.org/v2"
+        private static let Development = "https://newsapi.org/v2"
     }
     
     struct Constants {

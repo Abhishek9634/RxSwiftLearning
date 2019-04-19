@@ -1,5 +1,5 @@
 //
-//  UserRouter.swift
+//  SourceRouter.swift
 //  Model
 //
 //  Created by Abhishek Thapliyal on 5/21/18.
@@ -9,31 +9,30 @@
 import Foundation
 import FoxAPIKit
 
-public enum UserRouter: BaseRouter {
+public enum SourceRouter: BaseRouter {
  
-    case login(username: String, password: String)
+    case fetchSources
     
     public var method: HTTPMethod {
         switch self {
-        case .login:
-            return .post
+        case .fetchSources:
+            return .get
         }
     }
     
     public var path: String {
         switch self {
-        case .login:
-            return "/wp-json/jwt-auth/v1/token"
+        case .fetchSources:
+            return "/sources"
         }
     }
     
     public var params: [String: Any] {
         var params: [String: Any] = [:]
         switch self {
-        case .login(let username, let password):
+        case .fetchSources:
             params = [
-                "username": username,
-                "password": password
+                "apiKey": APIConfig.APICredentials.APIKey
             ]
         }
         return params
@@ -46,4 +45,5 @@ public enum UserRouter: BaseRouter {
     public var keypathToMap: String? {
         return nil
     }
+    
 }
