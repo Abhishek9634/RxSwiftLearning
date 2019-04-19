@@ -43,7 +43,7 @@ public enum SourceRouter: BaseRouter {
     }
     
     public var keypathToMap: String? {
-        return nil
+        return "sources"
     }
     
 }

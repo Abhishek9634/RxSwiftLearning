@@ -18,12 +18,14 @@ class ImageCollageViewController: UIViewController {
     }
     
     @IBAction func clearAction(_ sender: UIButton) {
+        self.showLoader()
         Source.fetchSource { (result) in
+            self.hideLoader()
             switch result {
-            case .success:
-                break
+            case .success(let response):
+                print(response.list)
             case .failure(let error):
-                break
+                self.handle(error: error)
             }
         }
     }
