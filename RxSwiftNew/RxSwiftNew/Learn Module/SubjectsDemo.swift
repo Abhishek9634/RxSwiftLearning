@@ -19,6 +19,7 @@ class SubjectsDemo {
     
     let publishObj = PublishSubject<String>()
     let behaviourSubject = BehaviorSubject(value: "Start")
+    let behaviourSubjectA = BehaviorSubject<[String]>(value: [])
     let varSubject = Variable<String>("Start")
     let behaviourRelay = BehaviorRelay<String>(value: "")
     let behaviourRelayA = BehaviorRelay<[String]>(value: [])
@@ -27,6 +28,11 @@ class SubjectsDemo {
     
     func run() {
         
+        self.setupPS()
+        self.setupBS()
+        self.setupBSA()
+        self.setupVS()
+        self.setupRS()
         self.setupBR()
         self.setupBRA()
     }
@@ -61,13 +67,12 @@ class SubjectsDemo {
          
          Three
          Four
-         
+         5
          */
     
     //BEHAVIOUR SUBJECT
 
         func setupBS() {
-    
             self.behaviourSubject.onNext("Zero")
             self.behaviourSubject.onNext("One")
             self.behaviourSubject.onNext("Two")
@@ -78,7 +83,7 @@ class SubjectsDemo {
     
         func subcribeBS() {
             let subscription = self.behaviourSubject.subscribe(onNext:{
-                print($0)
+                print("Behaviour Subject: \($0)")
             }).disposed(by: self.disaposeBag)
         }
     
@@ -95,6 +100,48 @@ class SubjectsDemo {
     
          */
 
+    // BEHAVIOUR SUBJECT: case array
+    func setupBSA() {
+        
+        self.behaviourSubjectA.onNext(["Zero"])
+        self.behaviourSubjectA.onNext(["One"])
+        self.behaviourSubjectA.onNext(["Two"])
+        
+        self.subcribeBSA()
+        self.runBSA()
+    }
+    
+    func subcribeBSA() {
+        let subscription = self.behaviourSubjectA.subscribe(onNext: {
+            print("BSA DEMO: \($0)")
+        }).disposed(by: self.disaposeBag)
+        
+        let _ = self.behaviourSubjectA.subscribe(onNext: { (value) in
+            print("BSA T: \(value)")
+        }, onError: { (error) in
+            print("BSA T: \(error)")
+        }, onCompleted: {
+            print("BSA T COMPLETED")
+        }, onDisposed: {
+            print("BSA T DISPOSED")
+        }).disposed(by: self.disaposeBag)
+        
+    }
+    
+    func runBSA() {
+        var array = try! self.behaviourSubjectA.value()
+        array.append("Three")
+        array.append("Four")
+        self.behaviourSubjectA.onNext(array)
+    }
+    
+    /*  O/P
+     
+    
+     
+     */
+    
+    
     //VARIABLE SUBJECT
         
         func setupVS() {
@@ -141,7 +188,7 @@ class SubjectsDemo {
     
         func subcribeRS() {
             let subscription = self.replaySubject.subscribe(onNext:{
-                print($0)
+                print("Replay Subject: \($0)")
             }).disposed(by: self.disaposeBag)
         }
     
@@ -205,6 +252,18 @@ class SubjectsDemo {
         let subscription = self.behaviourRelayA.subscribe(onNext:{
             print("BRA DEMO: \($0)")
         }).disposed(by: self.disaposeBag)
+        
+        
+        let _ = self.behaviourRelayA.subscribe(onNext: { (value) in
+            print("BRA T: \(value)")
+        }, onError: { (error) in
+            print("BRA T: \(error)")
+        }, onCompleted: {
+             print("BRA T COMPLETED")
+        }, onDisposed: {
+            print("BRA T DISPOSED")
+        }).disposed(by: self.disaposeBag)
+        
     }
     
     func runBRA() {

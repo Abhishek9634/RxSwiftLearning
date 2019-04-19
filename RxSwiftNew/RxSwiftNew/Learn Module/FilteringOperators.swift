@@ -45,7 +45,7 @@ class FilteringOperators {
     func elementAt() {
         let pSub = PublishSubject<String>()
         let _ = pSub.elementAt(1).subscribe { element in
-            print(element)
+            print("ELEMENT AT: \(element)")
         }.disposed(by: self.disposeBag)
         
         pSub.onNext("x")
