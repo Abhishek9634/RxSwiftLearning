@@ -24,5 +24,9 @@ public struct APIConfig {
         static let bundleIdentifier = Bundle.main.bundleIdentifier!
     }
     
+    struct APICredentials {
+        static let APIKey = "7b1568b218554e659e942bfed4c4e20d"
+    }
+    
 }
 

@@ -155,14 +155,10 @@
 		9F2A1DA92269D4EB00F6D903 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				9F2A1DAA2269D4EB00F6D903 /* APIError.swift */,
-				9F2A1DAB2269D4EB00F6D903 /* ModelError.swift */,
-				9F2A1DAC2269D4EB00F6D903 /* APIConfig.swift */,
-				9F2A1DAD2269D4EB00F6D903 /* BaseRouter.swift */,
-				9F2A1DAE2269D4EB00F6D903 /* ErrorResponse.swift */,
-				9F2A1DAF2269D4EB00F6D903 /* AuthHeaders.swift */,
-				9F2A1DB02269D4EB00F6D903 /* Parsing */,
 				9F2A1DB22269D4EB00F6D903 /* RxSwiftAPIClient.swift */,
+				9F6F8CF42269DD670012AD86 /* Configurations */,
+				9F6F8CF32269DD500012AD86 /* Error */,
+				9F2A1DB02269D4EB00F6D903 /* Parsing */,
 				9F2A1DB32269D4EB00F6D903 /* Router */,
 			);
 			path = API;
@@ -179,6 +175,7 @@
 		9F2A1DB32269D4EB00F6D903 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				9F2A1DAD2269D4EB00F6D903 /* BaseRouter.swift */,
 				9F2A1DB42269D4EB00F6D903 /* UserRouter.swift */,
 			);
 			path = Router;
@@ -236,6 +233,25 @@
 				9F8A4A7D222673EE00FC30C4 /* Resources */,
 			);
 			path = RxSwiftNew;
+			sourceTree = "<group>";
+		};
+		9F6F8CF32269DD500012AD86 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				9F2A1DAE2269D4EB00F6D903 /* ErrorResponse.swift */,
+				9F2A1DAA2269D4EB00F6D903 /* APIError.swift */,
+				9F2A1DAB2269D4EB00F6D903 /* ModelError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		9F6F8CF42269DD670012AD86 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				9F2A1DAC2269D4EB00F6D903 /* APIConfig.swift */,
+				9F2A1DAF2269D4EB00F6D903 /* AuthHeaders.swift */,
+			);
+			path = Configurations;
 			sourceTree = "<group>";
 		};
 		9F8A4A7C222673D100FC30C4 /* Learn Module */ = {
